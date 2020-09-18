@@ -45,16 +45,21 @@ void gpio_init() {
     GCR = 0x04;
 
     // Set GPIO data
-    GPDRA = 0x08;
+    // SYS_FAN
+    GPDRA = (1 << 3);
     GPDRB = 0x00;
     GPDRC = 0x00;
-    GPDRD = 0x38;
+    // PWR_BTN#, SCI#, SMI#
+    GPDRD = (1 << 5) | (1 << 4) | (1 << 3);
     GPDRE = 0x00;
-    GPDRF = 0x40;
-    GPDRG = 0x00;
+    // H_PECI
+    GPDRF = (1 << 6);
+    // AIRPLAN_LED#
+    GPDRG = (1 << 6);
     GPDRH = 0x00;
     GPDRI = 0x00;
-    GPDRJ = 0x00;
+    // LED_CAP#, LED_NUM#, LED_SCROLL#
+    GPDRJ = (1 << 5) | (1 << 4) | (1 << 3);
 
     // Set GPIO control
     // EC_PWM_LEDKB_P
