@@ -31,12 +31,12 @@ struct Gpio __code PWR_BTN_N =      GPIO(D, 5);
 struct Gpio __code PWR_SW_N =       GPIO(D, 0);
 struct Gpio __code SB_KBCRST_N =    GPIO(E, 6);
 struct Gpio __code SCI_N =          GPIO(D, 4);
-struct Gpio __code SLP_SUS_N =      GPIO(J, 0);
 struct Gpio __code SMI_N =          GPIO(D, 3);
 struct Gpio __code SUSB_N_PCH =     GPIO(H, 6);
 struct Gpio __code SUSC_N_PCH =     GPIO(H, 1);
 struct Gpio __code SWI_N =          GPIO(E, 0);
 struct Gpio __code USB_PWR_EN_N =   GPIO(F, 7);
+struct Gpio __code VA_EC_EN =       GPIO(J, 0); // renamed to SLP_SUS_EC#
 struct Gpio __code WLAN_EN =        GPIO(J, 2);
 struct Gpio __code WLAN_PWR_EN =    GPIO(B, 0);
 
